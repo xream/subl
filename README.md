@@ -6,7 +6,7 @@ Follows the syntax of the [TextMate URL scheme](http://blog.macromates.com/2007/
 
 ## Installation
 
-- Download and unzip [Subl.app.zip](https://github.com/dhoulb/subl/releases/download/v1.0/Subl.app.zip)
+- Download and unzip [Subl.app.zip](https://github.com/dhoulb/subl/releases/download/v1.1/Subl.app.zip)
 - Move Subl.app to your **/Applications** directory
 - Open once to register the handler
 
