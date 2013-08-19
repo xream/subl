@@ -2,11 +2,11 @@
 
 A subl:// _URL handler_ for **Sublime Text 2** and **Sublime Text 3** on Mac OSX. Made _very_ quickly in AppleScript.
 
-Follows the syntax of the [TextMate URL scheme](http://blog.macromates.com/2007/the-textmate-url-scheme/).
+Follows the syntax of the [TextMate URL scheme](http://blog.macromates.com/2007/the-textmate-url-scheme/). Also overrides txmt:// URLs, for compatibility with PHP debug tools that support txmt:// URLs.
 
 ## Installation
 
-- Download and unzip [Subl.app.zip](https://github.com/dhoulb/subl/releases/download/v1.1/Subl.app.zip)
+- Download and unzip [Subl.app.zip](https://github.com/dhoulb/subl/releases/download/v1.2/Subl.app.zip)
 - Move Subl.app to your **/Applications** directory
 - Open once to register the handler
 
