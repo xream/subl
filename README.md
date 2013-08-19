@@ -12,7 +12,7 @@ Follows the syntax of the [TextMate URL scheme](http://blog.macromates.com/2007/
 
 ## How to use
 
-Generate URLs that point to:
+Generate URLs in the following format:
 `subl://open?url=file://{{file}}&line={{line}}&column={{column}}`
 
 Examples:
@@ -24,16 +24,19 @@ Examples:
 - `url` - Absolute file:// link to the file, e.g. `file:///path/to/file.txt`
 - `line` - Line number in the file, e.g. `192`
 - `column` - Column number in the file, e.g. `14`
-- `path` - Path to Sublime Text, e.g. `/Applications/Sublime Text.app`
+
+`url` is the only required argument. All others are optional. If you don’t specify a `url`, Subl.app will throw an error dialog.
 
 ### Path
 
-The default path to Sublime Text is `/Applications/Sublime Text.app`. To change it, specify the `path` URL parameter. Ensure that any spaces are URL encoded as `%20`.
+The default path to Sublime Text is `/Applications/Sublime Text.app`. To change it, you can specify the additional `path` URL parameter. Ensure that any spaces are URL encoded as `%20`.
 
 Example:
 `subl://open?url=file://file.php&line=20&path=/Applications/Sublime%20Text%203.app`
 
-## subl:// URLs with PHP errors
+_(An even better solution is to just rename `Sublime Text 2.app` to `Sublime Text.app` in your `/Applications` dir, and it’ll work out of the box.)_
+
+## Sublime Text and PHP errors
 
 This code snippet will re-route all PHP errors to a custom error handler, and turn filenames into clicky Sublime Text links.
 
@@ -77,6 +80,25 @@ ini_set('display_errors', false); // Turn off built-in errors.
 
 _Remember:_ It's recommended to show no errors at all on live production websites. PHP errors leak details than can be useful to attackers.
 
-## Comments
+## Sublime Text and Ruby on Rails errors
 
-Hopefully some day a URL scheme will be baked in to Sublime Text. For now, this’ll do.
+Install Subl.app as above, and include [Better Errors](http://sublimetext.userecho.com/topic/97042-url-sheme-support-subletc/#comment_263670) in your Rails application. 
+
+Include the following code in an Initialiser to connect the two. Ensure you change your_local_path to the full base path of your application.
+
+```ruby
+if defined? BetterErrors
+  BetterErrors.editor = proc { |full_path, line|
+    full_path = full_path.sub(Rails.root.to_s, your_local_path)
+    "my-editor://open?url=file://#{full_path}&line=#{line}"
+  }
+end
+```
+
+See the [Better Errors Wiki](https://github.com/charliesome/better_errors/wiki) for more information about pointing editor links at Sublime Text.
+
+## General comments
+
+Hopefully some day a URL scheme will be baked in to Sublime Text, and all of this will be unneccessary!
+
+See [this thread](http://sublimetext.userecho.com/topic/97042-url-sheme-support-subletc/#comment_263670) on the Sublime Text support system, and upvote if you think this is important.
