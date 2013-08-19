@@ -84,12 +84,12 @@ _Remember:_ It's recommended to show no errors at all on live production website
 
 Install Subl.app as above, and include [Better Errors](http://sublimetext.userecho.com/topic/97042-url-sheme-support-subletc/#comment_263670) in your Rails application. 
 
-Include the following code in an Initialiser to connect the two. Ensure you change your_local_path to the full base path of your application.
+Use the following code snippet to tell Better Errors to use Subl.app as its editor. Change `local_path` to the full base path of your application.
 
 ```ruby
 if defined? BetterErrors
   BetterErrors.editor = proc { |full_path, line|
-    full_path = full_path.sub(Rails.root.to_s, your_local_path)
+    full_path = full_path.sub(Rails.root.to_s, local_path)
     "my-editor://open?url=file://#{full_path}&line=#{line}"
   }
 end
