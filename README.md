@@ -90,7 +90,7 @@ Use the following code snippet to tell Better Errors to use Subl.app as its edit
 if defined? BetterErrors
   BetterErrors.editor = proc { |full_path, line|
     full_path = full_path.sub(Rails.root.to_s, local_path)
-    "my-editor://open?url=file://#{full_path}&line=#{line}"
+    "subl://open?url=file://#{full_path}&line=#{line}"
   }
 end
 ```
