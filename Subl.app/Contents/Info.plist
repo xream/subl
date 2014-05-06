@@ -24,10 +24,18 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>Sublime Text URI Handler</string>
+			<string>Sublime Text URI Handler subl://</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>subl</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>Sublime Text URI Handler sublime://</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>sublime</string>
 			</array>
 		</dict>
 		<dict>
