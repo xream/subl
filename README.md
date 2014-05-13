@@ -2,7 +2,13 @@
 
 A subl:// _URL handler_ for **Sublime Text 2** and **Sublime Text 3** on Mac OSX. Made _very_ quickly in AppleScript.
 
-Follows the syntax of the [TextMate URL scheme](http://blog.macromates.com/2007/the-textmate-url-scheme/). Also overrides txmt:// URLs, for compatibility with PHP debug tools that support txmt:// URLs.
+Follows the syntax of the [TextMate URL scheme](http://blog.macromates.com/2007/the-textmate-url-scheme/).
+
+Gloms onto the following URL schemes:
+
+- **subl://**
+- **sublime://**
+- **txmt://** (compatibility with existing PHP debug tools)
 
 ## Installation
 
@@ -90,7 +96,7 @@ Use the following code snippet to tell Better Errors to use Subl.app as its edit
 if defined? BetterErrors
   BetterErrors.editor = proc { |full_path, line|
     full_path = full_path.sub(Rails.root.to_s, local_path)
-    "my-editor://open?url=file://#{full_path}&line=#{line}"
+    "subl://open?url=file://#{full_path}&line=#{line}"
   }
 end
 ```
