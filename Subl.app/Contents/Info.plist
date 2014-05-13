@@ -24,7 +24,7 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>Sublime Text URI Handler</string>
+			<string>Sublime Text URI Handler for subl:// URIs</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>subl</string>
@@ -32,7 +32,15 @@
 		</dict>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>Sublime Text URI Handler for txmt URIs</string>
+			<string>Sublime Text URI Handler for sublime:// URIs</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>sublime</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>Sublime Text URI Handler for txmt:// URIs</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>txmt</string>
@@ -57,7 +65,7 @@
 		<key>positionOfDivider</key>
 		<real>641</real>
 		<key>savedFrame</key>
-		<string>726 179 1178 1077 0 0 2560 1418 </string>
+		<string>785 234 1178 1077 0 0 2560 1418 </string>
 		<key>selectedTabView</key>
 		<string>event log</string>
 	</dict>
