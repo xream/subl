@@ -1,6 +1,7 @@
 # subl:// URL handler
 
-A subl:// _URL handler_ for **Sublime Text 2** and **Sublime Text 3** on Mac OSX. Made _very_ quickly in AppleScript.
+A subl:// _URL handler_ for **Sublime Text 2** and **Sublime Text 3** on Mac OSX. Made _very_ quickly in AppleScript. 
+*If you're a Windows user, try [this Windows Sublime Text subl:// URL handler](https://github.com/ktunkiewicz/subl-handler).*
 
 Follows the syntax of the [TextMate URL scheme](http://blog.macromates.com/2007/the-textmate-url-scheme/).
 
