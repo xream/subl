@@ -36,12 +36,13 @@ Examples:
 
 ### Path
 
-The default path to Sublime Text is `/Applications/Sublime Text.app`. To change it, you can specify the additional `path` URL parameter. Ensure that any spaces are URL encoded as `%20`.
+Subl looks for your Sublime Text app in three locations in the following order:
 
-Example:
-`subl://open?url=file://file.php&line=20&path=/Applications/Sublime%20Text%203.app`
+1. `/Applications/Sublime Text 3.app`
+2. `/Applications/Sublime Text 2.app`
+3. `/Applications/Sublime Text.app`
 
-_(An even better solution is to just rename `Sublime Text 2.app` to `Sublime Text.app` in your `/Applications` dir, and it’ll work out of the box.)_
+_As a quick fix, if your Sublime Text app isn't in any of these locations, you can just rename and move it so it does match one of them._
 
 ## Sublime Text and PHP errors
 
